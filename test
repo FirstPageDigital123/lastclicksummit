@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-high": "#d9e2ff",
+                "on-surface-variant": "#535b71",
+                "on-tertiary": "#f8f0ff",
+                "on-primary-container": "#594700",
+                "background": "#f6f6ff",
+                "on-tertiary-fixed-variant": "#4a00a4",
+                "error-container": "#f95630",
+                "surface-container": "#e2e7ff",
+                "primary": "#6f5900",
+                "secondary-fixed-dim": "#b4c1ff",
+                "on-secondary-fixed": "#00288d",
+                "error-dim": "#b92902",
+                "secondary-dim": "#2445b4",
+                "primary-container": "#fed01b",
+                "on-error": "#ffefec",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#c0a0ff",
+                "error": "#b02500",
+                "surface": "#f6f6ff",
+                "on-primary": "#fff2d3",
+                "on-surface": "#272e42",
+                "inverse-primary": "#fed01b",
+                "on-secondary-container": "#183cab",
+                "on-tertiary-fixed": "#200051",
+                "on-primary-fixed": "#433500",
+                "inverse-surface": "#060e20",
+                "primary-fixed": "#fed01b",
+                "tertiary": "#702ae1",
+                "surface-container-highest": "#d1dcff",
+                "on-background": "#272e42",
+                "secondary-fixed": "#c6cfff",
+                "primary-fixed-dim": "#eec200",
+                "surface-container-low": "#eef0ff",
+                "surface-dim": "#c7d4fa",
+                "inverse-on-surface": "#959cb5",
+                "surface-tint": "#6f5900",
+                "on-secondary": "#f2f1ff",
+                "on-tertiary-container": "#3f008e",
+                "surface-bright": "#f6f6ff",
+                "outline-variant": "#a5adc6",
+                "on-secondary-fixed-variant": "#2646b5",
+                "secondary": "#3352c0",
+                "outline": "#6f768e",
+                "tertiary-fixed-dim": "#b48fff",
+                "tertiary-container": "#c0a0ff",
+                "on-error-container": "#520c00",
+                "on-primary-fixed-variant": "#645000",
+                "surface-variant": "#d1dcff",
+                "tertiary-dim": "#6411d5",
+                "primary-dim": "#614d00",
+                "secondary-container": "#c6cfff"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk", "sans-serif"],
+                "body": ["Manrope", "sans-serif"],
+                "label": ["Space Grotesk", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-slate-900 dark:text-white font-headline">THE LAST CLICK</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-blue-600 dark:text-blue-400 border-b-2 border-yellow-400 pb-1 hover:text-blue-500 transition-colors duration-300" href="#agenda">Agenda</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors duration-300" href="#speakers">Speakers</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors duration-300" href="#venue">Venue</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-slate-600 dark:text-slate-300 hover:text-blue-500 transition-colors duration-300" href="#faq">FAQ</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline font-bold uppercase tracking-widest text-sm hover:scale-95 duration-150 rounded-lg">
+                REGISTER NOW
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-24 pb-12 px-6 md:px-12 bg-primary-container min-h-[921px] flex flex-col justify-center relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-secondary opacity-10 rounded-full blur-3xl"></div>
+<div class="absolute -left-24 bottom-12 w-64 h-64 bg-tertiary opacity-10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto w-full relative z-10">
+<h1 class="font-headline font-black text-6xl md:text-9xl leading-none tracking-tighter text-on-primary-container mb-8">
+                THE LAST <br/>CLICK SUMMIT
+            </h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+<div class="space-y-6">
+<p class="text-xl md:text-2xl font-medium text-on-primary-container max-w-xl opacity-90">
+                        The ultimate gathering for performance marketers, creative directors, and data scientists shaping the future of digital conversion.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-on-primary-container text-primary-container px-4 py-2 font-headline font-bold uppercase tracking-tighter">
+                            NOV 14-16, 2024
+                        </div>
+<div class="border-2 border-on-primary-container text-on-primary-container px-4 py-2 font-headline font-bold uppercase tracking-tighter">
+                            AMSTERDAM, NL
+                        </div>
+</div>
+</div>
+<!-- Countdown Timer -->
+<div class="bg-surface-container-lowest/30 backdrop-blur-sm p-8 rounded-xl flex justify-between gap-4">
+<div class="text-center">
+<div class="text-4xl md:text-6xl font-black font-headline text-on-primary-container">42</div>
+<div class="text-xs uppercase font-headline font-bold tracking-widest opacity-70">Days</div>
+</div>
+<div class="text-4xl md:text-6xl font-black font-headline text-on-primary-container">:</div>
+<div class="text-center">
+<div class="text-4xl md:text-6xl font-black font-headline text-on-primary-container">12</div>
+<div class="text-xs uppercase font-headline font-bold tracking-widest opacity-70">Hours</div>
+</div>
+<div class="text-4xl md:text-6xl font-black font-headline text-on-primary-container">:</div>
+<div class="text-center">
+<div class="text-4xl md:text-6xl font-black font-headline text-on-primary-container">08</div>
+<div class="text-xs uppercase font-headline font-bold tracking-widest opacity-70">Mins</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Agenda Section -->
+<section class="py-24 bg-surface flex flex-col md:flex-row" id="agenda">
+<!-- Sidebar Headline -->
+<div class="hidden md:flex w-32 items-center justify-center border-r border-outline-variant/15">
+<h2 class="editorial-vertical-text font-headline font-black text-7xl text-surface-container-highest tracking-tighter opacity-50 select-none">
+                AGENDA
+            </h2>
+</div>
+<div class="flex-1 px-6 md:px-24">
+<div class="max-w-4xl space-y-24">
+<!-- Agenda Item 1 -->
+<div class="group">
+<div class="flex items-start gap-8">
+<span class="font-headline font-bold text-secondary text-2xl pt-2">09:00</span>
+<div class="flex-1">
+<h3 class="font-headline font-black text-4xl md:text-5xl text-on-surface mb-4 group-hover:text-secondary transition-colors">The Post-Cookie Apocalypse</h3>
+<p class="text-lg text-on-surface-variant max-w-2xl mb-8">
+                                Navigating the first-party data revolution and building sustainable attribution models that actually work in 2025.
+                            </p>
+<div class="flex items-center gap-4">
+<img alt="Speaker" class="w-16 h-16 rounded-full object-cover border-2 border-secondary" data-alt="professional portrait of a confident female tech leader with glasses and a warm smile in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq4xL5AIF6q2PW_llFa-OzqTUibKd98YxmDWY4eY4OanHA2vn_RS-ZP4jkiXn4AubeFvUKpT6ocddgy3D_R_olIu8UhjYPaaneRSMkp0huBvRav424be2ikprXX-1ak0LFFXYuD8rTeTeaJkvyMPUTz34K7RZ2bPwcRXdDDqZtj4wiv2323rjXZGL5ML3fdlmM5Ku91G9Yv87GXfaX-xtwu3qOwk9g54KUDXI8rXM1pE8VO5PGcar2IiTFPuqyQGjigswn0fadpHCn"/>
+<div>
+<p class="font-headline font-bold text-on-surface uppercase tracking-tight">Elena Rodriguez</p>
+<p class="text-sm text-secondary font-bold uppercase tracking-widest">Head of Growth, Velocity AI</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Agenda Item 2 -->
+<div class="group">
+<div class="flex items-start gap-8">
+<span class="font-headline font-bold text-secondary text-2xl pt-2">11:30</span>
+<div class="flex-1">
+<h3 class="font-headline font-black text-4xl md:text-5xl text-on-surface mb-4 group-hover:text-secondary transition-colors">Psychology of the Click</h3>
+<p class="text-lg text-on-surface-variant max-w-2xl mb-8">
+                                Neuromarketing techniques to optimize high-ticket landing pages for maximum cognitive resonance and conversion.
+                            </p>
+<div class="flex items-center gap-4">
+<img alt="Speaker" class="w-16 h-16 rounded-full object-cover border-2 border-secondary" data-alt="close-up portrait of a thoughtful man in a charcoal turtleneck looking slightly away from camera with intellectual expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuy0VXq3BReg46A_s9Sz1hw6S0AFAsWzs6IJoGfnF5rkCIK-F64m6fDWuaCItJgYIsYL1rGXXcp62npsKnEZeSGp4ABthvvNQStdPxnitGzskbZJ8IgZNIlFrW1chNkctPiin8iRKswz8F-PkVF7-hyDE7d0GrekLd1grQZdfVIrjZg0cshBjw9Jfpt67SCpNh7loabghwNqGMvNknt5CaB4MXnfcPh178qTEvpgaxwbcVilHeSgGDKjLyzOIm_HWsuSp_aovQpB4P"/>
+<div>
+<p class="font-headline font-bold text-on-surface uppercase tracking-tight">Dr. Marcus Chen</p>
+<p class="text-sm text-secondary font-bold uppercase tracking-widest">Behavioral Scientist, MindFlow</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Agenda Item 3 (Highlight Section) -->
+<div class="bg-surface-container-high p-8 md:p-12 rounded-xl relative overflow-hidden group">
+<div class="absolute right-0 top-0 opacity-10 font-headline font-black text-9xl -mr-8 -mt-8 text-secondary">LUNCH</div>
+<div class="flex items-start gap-8 relative z-10">
+<span class="font-headline font-bold text-secondary text-2xl pt-2">13:00</span>
+<div class="flex-1">
+<h3 class="font-headline font-black text-4xl text-on-surface mb-4">The Networking Feast</h3>
+<p class="text-lg text-on-surface-variant max-w-xl">
+                                Curated culinary experience designed for high-level networking and partnership discussions.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Speakers Bento Grid -->
+<section class="py-24 bg-surface-container-low px-6 md:px-12" id="speakers">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-secondary font-headline font-black text-sm uppercase tracking-[0.3em] mb-4 block">Meet the Minds</span>
+<h2 class="font-headline font-black text-5xl md:text-7xl text-on-surface tracking-tighter">THE SPEAKERS</h2>
+</div>
+<div class="hidden md:block">
+<p class="text-on-surface-variant font-medium max-w-xs text-right">
+                        Bringing together the most influential voices in digital transformation and data science.
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-secondary">
+<img alt="Sarah J." class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="artistic portrait of a woman with vibrant lighting, neon blue highlights on her face, and a modern tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCveqVzqLWgBwlFrun08gZg9yhWOVObl8MuD6Oo4fWYRKreTFyUoxgB6R52KjynMG9S3U71A56i9qzhFYWr5EvMMVSyIq7UdfXEPI-byJ-nY--rY0r8lCmilZFiYC9ifya62jTMRN4aaoVggMVo8N_u-5w4cIpp-TctBM7J-7wmgLm1VKRYXyCa5N5UClPhS32i3wzNEIi6fMxg7_BxxDOxf3tzek5wZqTKTXyRO18vYXWvQ0NBG-4x-SNzi-gxvQsf1f5QRqIfuqLS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<p class="font-headline font-black text-4xl text-white uppercase tracking-tighter">Sarah Jenkins</p>
+<p class="text-secondary-fixed font-bold uppercase tracking-widest text-sm">CEO @ DATASTORM</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-tertiary">
+<img alt="Tom H." class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="vibrant headshot of a smiling man in a colorful jacket with a geometric background pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFP-NDSuRU0iFcCu4FPdad8zxnF3PMGDeYjAHrVdwHrXnWEd0CYa-652iMI3L-FW0UQlLitF_x9IWtXF-DxchlHbZb5qOzwz0_8Qt0y3wzuCAMUgdPl8ikKS3z2vKwNsMYA1HJvWLOMT1p-rK7GuO_G0_Xyf_G16gJci7G2ftkErzCg4Tb_ZHzK7CXpF1TVRywCZ1pr3ZTl8k51JI0gpW9uwLgRfcMrQV7U56ruFhkxGCA1hgECy8v_Ad_PQ2eatfWLyc8ReAADWZ5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-headline font-black text-xl text-white uppercase">Tom Henders</p>
+<p class="text-tertiary-fixed font-bold text-xs uppercase">Growth Lead</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-on-surface">
+<img alt="Maya K." class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="professional portrait of a woman with intense focused gaze and minimalist clothing against a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB95sWD1r_iVBtUoJkqMZxJX32iWF8rmNGvpQOr8bdgQ8QEK8CzPBhAILUFJiqxHFMKNyssPCAY5DyGUWJ5Q03GUmtKFtl4HtmdJd0mUrhWcsaoCBpDHRGzbpvE9bZaLejjan18fuURNG3BiQBa51tUf-UPka_rfqQQbrKF7HqaSyl5vSUEuka4_gEXdYYO0FVSfBIKitc_YXGCOrWzWKkiFLMKindIQLrYkCCF_MrQnLDfbs6OSwUCswpsWwKxDGwkSX1LdLimkFdz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-headline font-black text-xl text-white uppercase">Maya Kapoor</p>
+<p class="text-outline-variant font-bold text-xs uppercase">ML Engineer</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-primary">
+<img alt="David L." class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="candid shot of a creative professional in a sunlit loft studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJ1O1xikkQRl0uDpTB9zW2LxUoztA7XAOtThbccgJVBj1ajJPdZ43_Obzmxk5R_6oJb4VvC0x1GcBVacDl1541qZOwpUAnSU4Bk2XDOkl2sfdxfjb5di2n1hBZkWKPFwCvPPNNtp3r_9qXOYq9gWdtRNkQBwMbyJswRNR9b9omwIiXp4_m7ri7tVmNdvYoPKCe9QF80yVrB7NzvPuDs9D0-YdAoBxS9YjbluFQGt-5t3PgXdQBCLlOLAi0JBq6dFBHpmQGcrMvMeJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-headline font-black text-xl text-white uppercase">David Lattimore</p>
+<p class="text-primary-fixed font-bold text-xs uppercase">Creative Director</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-secondary-dim">
+<img alt="Iris V." class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="bold editorial portrait of a woman with short hair and striking facial features in front of a blue studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORyRZc3uuOqZf-IrCqUQ-oiS0c7zylMCDumjKbVc2fjzCTD726k5Wg9gd7XWvaEEww-vpA43DHLbqCVCsTfzIxJcBCLfBou4WykzOI4JrdwoKBBTPxHhcM0ZbWvk3q9n0iKhOmcMIAiP6xDrDiq01HsJmFDIqRyZrgnzUDlsL1_wKxnzs-RXUy4B0_zmqMz7kWjUi4kFFV1oH-QelAQAcZ_wAILVmGGH7iOxSDFQm_xrSK90Pn9hsBE39oX5zM32tK17cxWxwLreJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary-dim via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-headline font-black text-xl text-white uppercase">Iris Van de Berg</p>
+<p class="text-secondary-fixed font-bold text-xs uppercase">Data Architect</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Section -->
+<section class="py-24 bg-surface" id="register">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="bg-primary-container rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-xl">
+<div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+<h2 class="font-headline font-black text-5xl md:text-7xl text-on-primary-container leading-[0.9] mb-8 tracking-tighter">
+                        SECURE YOUR <br/>POSITION
+                    </h2>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span class="font-headline font-bold uppercase text-on-primary-container">Full 3-Day Summit Access</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span class="font-headline font-bold uppercase text-on-primary-container">VIP Networking Evening</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span class="font-headline font-bold uppercase text-on-primary-container">Digital Resource Toolkit</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary font-bold">check_circle</span>
+<span class="font-headline font-bold uppercase text-on-primary-container">Early-Bird Pricing Applied</span>
+</li>
+</ul>
+<div class="p-6 bg-on-primary-container/10 border border-on-primary-container/20 rounded-xl">
+<p class="font-headline font-black text-4xl text-on-primary-container">€899.00</p>
+<p class="text-sm font-bold uppercase tracking-widest text-on-primary-container opacity-60">Per Delegate Pass</p>
+</div>
+</div>
+<!-- Registration Form -->
+<div class="lg:w-1/2 bg-inverse-surface p-12 md:p-20">
+<form action="#" class="space-y-6">
+<div>
+<label class="block font-headline font-bold text-surface-container uppercase tracking-widest text-xs mb-2">Full Name</label>
+<input class="w-full bg-surface-container-low/10 border-0 focus:ring-2 focus:ring-primary-container text-white p-4 font-headline uppercase tracking-widest text-sm rounded-lg" placeholder="YOUR NAME" type="text"/>
+</div>
+<div>
+<label class="block font-headline font-bold text-surface-container uppercase tracking-widest text-xs mb-2">Company Email</label>
+<input class="w-full bg-surface-container-low/10 border-0 focus:ring-2 focus:ring-primary-container text-white p-4 font-headline uppercase tracking-widest text-sm rounded-lg" placeholder="EMAIL@COMPANY.COM" type="email"/>
+</div>
+<div>
+<label class="block font-headline font-bold text-surface-container uppercase tracking-widest text-xs mb-2">Ticket Type</label>
+<select class="w-full bg-surface-container-low/10 border-0 focus:ring-2 focus:ring-primary-container text-white p-4 font-headline uppercase tracking-widest text-sm rounded-lg">
+<option>PROFESSIONAL PASS - €899</option>
+<option>EXECUTIVE VIP - €1,499</option>
+<option>GROUP TICKET (5+) - CONTACT US</option>
+</select>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-headline font-black py-5 uppercase tracking-[0.2em] hover:opacity-90 transition-opacity rounded-lg text-lg" type="submit">
+                            COMPLETE REGISTRATION
+                        </button>
+<p class="text-center text-xs text-outline-variant font-bold uppercase tracking-widest opacity-60">
+                            By clicking register, you agree to our Terms of Service.
+                        </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Venue / Map Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="venue">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2">
+<span class="text-secondary font-headline font-black text-sm uppercase tracking-[0.3em] mb-4 block">The Destination</span>
+<h2 class="font-headline font-black text-5xl md:text-7xl text-on-surface tracking-tighter mb-8 leading-none">THE KROMHOUT HALLS</h2>
+<p class="text-xl text-on-surface-variant mb-8 font-medium">
+                    An industrial landmark in Amsterdam North, transformed into a high-tech conference hub. Perfect acoustics, premium aesthetics, and massive space for deep-focus workshops.
+                </p>
+<div class="space-y-4">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<p class="font-headline font-bold uppercase tracking-tight">Gedempt Hamerkanaal 231, Amsterdam</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">directions_bus</span>
+<p class="font-headline font-bold uppercase tracking-tight">10 mins via Ferry from Central Station</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<div class="aspect-square bg-secondary/5 rounded-3xl overflow-hidden relative border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="aerial map view of Amsterdam North docks and canal area with modern architectural landmarks and industrial character" data-location="Amsterdam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuTtn4umDfUL-6cxsEDXwlu7Gk8WQaLF2agqhU2jMi5xkYuZvCjGNHRk9P8sJ487pzTBZysTSdpzcs0Vgn0DIwv64c1BKWO1X2DQ5gDYo2PSCBBxy0W2cB-A6v_tZYDxjcsiMAIpHOmtXzqUf1D4zZIC7b73x8Sjpa8Yt_03lganeM_vkmkQq42GmBddkIjEf0lWCqWZ7Y8_-HAYJvjK-6bX4aTVNDbQrgL98nPOVkCaPi2l1Tnl4oGTHVG7B_0leHGENH0Yd9YKfw"/>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface" id="faq">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="font-headline font-black text-5xl text-center mb-16 tracking-tighter">FREQUENTLY ASKED</h2>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h4 class="font-headline font-black text-xl mb-2 text-on-surface">ARE TICKETS REFUNDABLE?</h4>
+<p class="text-on-surface-variant font-medium">Cancellations are permitted up to 30 days before the event for a full refund minus a €50 processing fee.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h4 class="font-headline font-black text-xl mb-2 text-on-surface">IS THERE A HOTEL DISCOUNT?</h4>
+<p class="text-on-surface-variant font-medium">Yes, delegates receive a 20% discount at the nearby Sir Adam Hotel and DoubleTree by Hilton.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h4 class="font-headline font-black text-xl mb-2 text-on-surface">CAN I CHANGE MY DELEGATE INFO?</h4>
+<p class="text-on-surface-variant font-medium">You can transfer your ticket or update attendee details at any time up to 48 hours before the event start.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-yellow-400 dark:bg-yellow-500 w-full min-h-[300px] flex flex-col justify-between tonal block shift">
+<div class="w-full px-12 py-16 flex flex-col md:flex-row justify-between items-start">
+<div class="mb-8 md:mb-0">
+<div class="text-4xl font-black text-slate-900 font-headline mb-4">THE LAST CLICK</div>
+<p class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-slate-800 max-w-xs">
+                    THE DEFINITIVE CONVERSION &amp; ATTRIBUTION SUMMIT FOR THE NEW INTERNET.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-slate-800 hover:text-white transition-all underline decoration-2" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-slate-800 hover:text-white transition-all" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-slate-800 hover:text-white transition-all" href="#">Press Kit</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-slate-800 hover:text-white transition-all" href="#">Contact Us</a>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-black/5 flex justify-center">
+<p class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-slate-900 text-xs opacity-60">
+                © 2024 THE LAST CLICK SUMMIT. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+</body></html>
